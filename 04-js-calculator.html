@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <style>
+            .container {
+                width:500px;
+                height: 300px;
+                background-color: aquamarine;
+                text-align: center;
+            }
+        </style>
+
+        <script>
+            function tambah() {
+                var angka1 = document.getElementById("input-1").value;
+                var angka2 = document.getElementById("input-2").value;
+
+                var hasil = parseInt(angka1) + parseInt(angka2);
+                document.getElementById("hasil").innerHTML = hasil;
+
+            }
+
+            function kurang() {
+                var angka1 = document.getElementById("input-1").value;
+                var angka2 = document.getElementById("input-2").value;
+
+                var hasil = parseInt(angka1) - parseInt(angka2);
+                document.getElementById("hasil").innerHTML = hasil;
+            }
+
+            function kali() {
+                var angka1 = document.getElementById("input-1").value;
+                var angka2 = document.getElementById("input-2").value;
+
+                var hasil = parseInt(angka1) * parseInt(angka2);
+                document.getElementById("hasil").innerHTML = hasil;
+            }
+            function bagi() {
+                var angka1 = document.getElementById("input-1").value;
+                var angka2 = document.getElementById("input-2").value;
+
+                var hasil = parseInt(angka1) / parseInt(angka2);
+                document.getElementById("hasil").innerHTML = hasil;
+            }
+        </script>
+    </head>
+    <body>
+        
+        <h2>Kalkulator</h2>
+        <div class="container">
+            <table style="text-align: center; width: 100%;">
+                <tr>
+                    <td><label for="input-1">Angka 1</label></td>
+                    <td><label for="input-2">Angka </label></td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="input-1"></td>
+                    <td><input type="number" id="input-2"></td>
+                </tr>
+            </table>
+            <br>
+
+            <button onclick="tambah()">Tambah (+)</button>
+            <button onclick="kurang()">Kurang (-)</button>
+            <button onclick="kali()">Kali (*)</button>
+            <button onclick="bagi()">bagi (/)</button>
+
+            <br>
+
+            <h3 id="hasil">-</h3>
+        </div>
+    </body>
+</html>
